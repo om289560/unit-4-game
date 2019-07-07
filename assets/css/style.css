@@ -1,0 +1,52 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10vw 30vw 10vw;
+    grid-gap: 1em;
+}
+
+title, .totalScore {
+    grid-column: 1 / span 5;
+}
+
+main {
+    grid-column: 1 / span 3;
+}
+
+.crystals {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.crystal {
+    height: 200px; 
+}
+
+.score {
+    grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+    main, .score {
+        grid-column: 1 / span 5;
+    }
+}
+
+body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+}
+
+title, main, .score, .totalScore {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+title, .totalScore {
+    height: 10vw;
+    ;
+}
